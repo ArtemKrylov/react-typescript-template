@@ -1,4 +1,4 @@
-export const theme = Object.freeze({
+export const theme = {
   colors: {
     white: '#ffffff',
     grey: `#dddddd`,
@@ -33,7 +33,7 @@ export const theme = Object.freeze({
   textInherit: `font-size: inherit;
   line-height: inherit;
   letter-spacing: inherit;`,
-  text: (fs, lh, ls) => `font-size: ${fs}px;
+  text: (fs:number, lh:number, ls:number) => `font-size: ${fs}px;
   line-height: calc(${lh}px / ${fs}px);
   letter-spacing: ${ls}px;`,
-});
+} as const;
